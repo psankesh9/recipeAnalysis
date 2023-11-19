@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recipe Analysis Project</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+        h1, h2 {
+            color: #333366;
+        }
+        iframe {
+            width: 100%;
+            height: 500px; /* You can adjust the height as needed */
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Your Title Here</h1>
+    <p><strong>Name(s):</strong> Johnny Gonzales, Pratheek Sankeshi</p>
+    <p><strong>Website Link:</strong> (your website link)</p>
+
+    <h2>Data Preparation and Cleaning</h2>
+    <p>Describe the data loading, merging, and cleaning process here...</p>
+
+    <h2>Univariate Analysis</h2>
+    <iframe src="assets/distribution_of_steps.html" frameBorder="0"></iframe>
+    <p>Explain the histogram of the number of steps in recipes here...</p>
+
+    <iframe src="assets/distribution_of_ingredients.html" frameBorder="0"></iframe>
+    <p>Explain the histogram of the number of ingredients in recipes here...</p>
+
+    <iframe src="assets/distribution_of_ratings.html" frameBorder="0"></iframe>
+    <p>Explain the distribution of average ratings here...</p>
+
+    <h2>Bivariate Analysis</h2>
+    <iframe src="assets/steps_vs_average_rating.html" frameBorder="0"></iframe>
+    <p>Explain the scatter plot for number of steps and average rating here...</p>
+
+    <iframe src="assets/ingredients_vs_average_rating.html" frameBorder="0"></iframe>
+    <p>Explain the scatter plot for number of ingredients and average rating here...</p>
+
+    <h2>Missingness Analysis</h2>
+    <p>P-value for dependency of missingness in 'rating' on 'n_steps': 1.0</p>
+    <p>Explain your interpretation of the missingness analysis here...</p>
+
+    <h2>Hypothesis Testing</h2>
+    <p>T-statistic: 1.042663633427837, P-value: 0.2971051945778797</p>
+    <p>Explain your hypothesis testing results here...</p>
+
+    <p>Based on these findings, summarize the implications and your conclusions here...</p>
+</body>
+</html>
