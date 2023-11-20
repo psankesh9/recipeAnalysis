@@ -20,15 +20,17 @@
 <body>
     <h1>Your Title Here</h1>
     <p><strong>Name(s):</strong> Johnny Gonzales, Pratheek Sankeshi</p>
-    <p><strong>Website Link:</strong> (your website link)</p>
+    <p><strong>Website Link:</strong> https://psankesh9.github.io/recipeAnalysis/</p>
 
     <h2>Introduction</h2>
     <p>This project explores a dataset of recipes, focusing on the question: Does the complexity of a recipe (measured by the number of steps and ingredients) affect its average rating? The dataset contains [number of rows] rows and relevant columns like 'n_steps', 'n_ingredients', and 'average_rating'. Understanding the relationship between recipe complexity and ratings can provide insights for home cooks and recipe developers.</p>
-
     <h2>Data Preparation and Cleaning</h2>
     <p>The data was loaded from two CSV files and merged based on recipe IDs. The cleaning process involved handling missing values, standardizing formats, and computing average ratings. These steps were crucial for ensuring accurate and meaningful analysis.</p>
-    <p>Show the head of your cleaned DataFrame here...</p>
-
+    
+    <iframe src="assets/merged_df_head.html" width="100%" height="500" frameborder="0"></iframe>
+    <p>Displayed above is the top portion of our cleaned DataFrame, showing a snapshot of the data structure after initial preparation, which provides a transparent view into the dataset's starting point for further analysis.</p>
+    
+    
     <h2>Univariate Analysis</h2>
 <iframe src="assets/distribution_of_steps.html" frameBorder="0"></iframe>
 <p>The histogram of the number of steps in recipes reveals a general tendency towards simpler recipes, with most recipes requiring a relatively small number of steps. This could suggest a preference or prevalence of less complex recipes in the dataset.</p>
@@ -45,6 +47,11 @@
 
 <iframe src="assets/ingredients_vs_average_rating.html" frameBorder="0"></iframe>
 <p>Similarly, the scatter plot examining the relationship between the number of ingredients and average ratings indicates no strong correlation. This suggests that the number of ingredients, a proxy for recipe complexity, does not play a major role in determining a recipe's average rating.</p>
+
+<h2>Interesting Aggregates</h2>
+<p>Here we look at the mean average ratings grouped by the number of ingredients, which provides insights into how ingredient variety may impact perceived recipe quality.</p>
+<iframe src="assets/pivot_table.html" width="100%" height="600" frameborder="0"></iframe>
+<p>This table demonstrates that the number of ingredients does not significantly affect the average rating, suggesting that recipes are judged on factors beyond just complexity.</p>
 
 <h2>Missingness Analysis</h2>
 <p>P-value for dependency of missingness in 'rating' on 'n_steps': 1.0</p>
