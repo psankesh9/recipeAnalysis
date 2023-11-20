@@ -20,36 +20,40 @@
 <body>
     <h1>Your Title Here</h1>
     <p><strong>Name(s):</strong> Johnny Gonzales, Pratheek Sankeshi</p>
-    <p><strong>Website Link:</strong> https://psankesh9.github.io/recipeAnalysis/ </p>
+    <p><strong>Website Link:</strong> (your website link)</p>
+
+    <h2>Introduction</h2>
+    <p>This project explores a dataset of recipes, focusing on the question: Does the complexity of a recipe (measured by the number of steps and ingredients) affect its average rating? The dataset contains [number of rows] rows and relevant columns like 'n_steps', 'n_ingredients', and 'average_rating'. Understanding the relationship between recipe complexity and ratings can provide insights for home cooks and recipe developers.</p>
 
     <h2>Data Preparation and Cleaning</h2>
-    <p>Describe the data loading, merging, and cleaning process here...</p>
+    <p>The data was loaded from two CSV files and merged based on recipe IDs. The cleaning process involved handling missing values, standardizing formats, and computing average ratings. These steps were crucial for ensuring accurate and meaningful analysis.</p>
+    <p>Show the head of your cleaned DataFrame here...</p>
 
     <h2>Univariate Analysis</h2>
-    <iframe src="assets/distribution_of_steps.html" frameBorder="0"></iframe>
-    <p>Explain the histogram of the number of steps in recipes here...</p>
+<iframe src="assets/distribution_of_steps.html" frameBorder="0"></iframe>
+<p>The histogram of the number of steps in recipes reveals a general tendency towards simpler recipes, with most recipes requiring a relatively small number of steps. This could suggest a preference or prevalence of less complex recipes in the dataset.</p>
 
-    <iframe src="assets/distribution_of_ingredients.html" frameBorder="0"></iframe>
-    <p>Explain the histogram of the number of ingredients in recipes here...</p>
+<iframe src="assets/distribution_of_ingredients.html" frameBorder="0"></iframe>
+<p>The distribution of the number of ingredients similarly skews towards simplicity, with the majority of recipes using fewer ingredients. This pattern could indicate a bias in the dataset towards recipes that are easier to prepare, perhaps reflecting user preferences or submission trends.</p>
 
-    <iframe src="assets/distribution_of_ratings.html" frameBorder="0"></iframe>
-    <p>Explain the distribution of average ratings here...</p>
+<iframe src="assets/distribution_of_ratings.html" frameBorder="0"></iframe>
+<p>The average ratings distribution shows a notable concentration of higher ratings. This skew towards higher ratings could suggest a tendency of users to submit reviews for recipes they liked, or it might reflect a general satisfaction with the recipes in the dataset.</p>
 
-    <h2>Bivariate Analysis</h2>
-    <iframe src="assets/steps_vs_average_rating.html" frameBorder="0"></iframe>
-    <p>Explain the scatter plot for number of steps and average rating here...</p>
+<h2>Bivariate Analysis</h2>
+<iframe src="assets/steps_vs_average_rating.html" frameBorder="0"></iframe>
+<p>The scatter plot comparing the number of steps in a recipe and its average rating does not show a clear trend, suggesting that the complexity of a recipe (as measured by the number of steps) does not have a significant impact on its average rating.</p>
 
-    <iframe src="assets/ingredients_vs_average_rating.html" frameBorder="0"></iframe>
-    <p>Explain the scatter plot for number of ingredients and average rating here...</p>
+<iframe src="assets/ingredients_vs_average_rating.html" frameBorder="0"></iframe>
+<p>Similarly, the scatter plot examining the relationship between the number of ingredients and average ratings indicates no strong correlation. This suggests that the number of ingredients, a proxy for recipe complexity, does not play a major role in determining a recipe's average rating.</p>
 
-    <h2>Missingness Analysis</h2>
-    <p>P-value for dependency of missingness in 'rating' on 'n_steps': 1.0</p>
-    <p>Explain your interpretation of the missingness analysis here...</p>
+<h2>Missingness Analysis</h2>
+<p>P-value for dependency of missingness in 'rating' on 'n_steps': 1.0</p>
+<p>This result from the missingness analysis indicates that the missingness of ratings is not dependent on the number of steps in a recipe. In other words, it is unlikely that the complexity of a recipe influences whether or not it receives a rating, suggesting that the missing ratings are not NMAR (Not Missing At Random) with respect to the number of steps.</p>
 
-    <h2>Hypothesis Testing</h2>
-    <p>T-statistic: 1.042663633427837, P-value: 0.2971051945778797</p>
-    <p>Explain your hypothesis testing results here...</p>
+<h2>Hypothesis Testing</h2>
+<p>T-statistic: 1.042663633427837, P-value: 0.2971051945778797</p>
+<p>The hypothesis testing aimed to determine whether the number of ingredients in a recipe significantly affects its average rating. The resulting p-value, which is above the conventional threshold of 0.05, leads us to fail to reject the null hypothesis. This indicates that there is no significant evidence to suggest that the number of ingredients has a substantial impact on the average rating of a recipe.</p>
 
-    <p>Based on these findings, summarize the implications and your conclusions here...</p>
+<p>These findings collectively suggest that the complexity of a recipe, whether measured by the number of steps or ingredients, does not significantly influence its likelihood of being rated or its average rating. The insights gleaned from this analysis could be valuable for recipe creators and culinary enthusiasts, emphasizing other factors over complexity in recipe development and evaluation.</p>
 </body>
 </html>
